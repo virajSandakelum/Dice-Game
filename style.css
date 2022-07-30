@@ -1,0 +1,205 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #1a4a3c;
+    background-image: url("http://www.vanseodesign.com/blog/wp-content/uploads/2011/10/background-3.jpg");
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+.display-part { 
+    grid-area: 1 / 2 / 2 / 4; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.dice1-part { grid-area: 2 / 2 / 3 / 3; }
+.dice2-part { grid-area: 2 / 3 / 3 / 4; }
+.button-part { grid-area: 3 / 2 / 4 / 4; }
+.player1 { grid-area: 1 / 1 / 4 / 2; }
+.player2 { grid-area: 1 / 4 / 4 / 5; }
+
+    
+
+.container
+{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    min-height: 120px;
+    max-height: auto;
+}
+
+.display-part
+{
+    background-color: #1a0202;
+    border: 1px solid rgb(240, 240, 240);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.dice1-part
+{
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.dice2-part
+{
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.button-part
+{
+    background-color: #faf6fada;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+#rollButton
+{
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: rgb(79, 220, 19);
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#restButton
+{
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: rgb(208, 14, 14);
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.button-part > button
+{
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.dice1-part img
+{
+    width: 90%;
+    height: 80%;
+}
+
+.dice2-part img
+{
+    width: 90%;
+    height: 80%;
+}
+
+.players
+{
+    width:192%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:rgb(200, 235, 25);
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.player1 img
+{
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.player2 img
+{
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    margin-left: 10px;
+    text-align: center;
+}
+
+
+.player1
+{
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    font-weight: bold;
+    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player2
+{
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    font-weight: bold;
+    background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+    background-color: rgba(224, 21, 221, 0.653);
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.active
+{
+    background-image: linear-gradient(60deg, #aeff00 0%, #aeff00 100%);
+    font-size: 36px;
+    font-weight: bold;
+    border: 5px solid rgb(226, 2, 2);
+    box-shadow: 0px 0px 10px 1px rgb(226, 2, 2,0.75);
+}
